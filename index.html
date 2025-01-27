@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabeBall</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="functions.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="img/bola4estrellas.png" height="60px" width="60px" id="bola4estrellas">
+        <h1>LabeBall</h1>
+    </header>
+    <div class="principal">
+        <div class="reglas">
+            <h3>Reglas del juego</h3>
+            <p>Jugador 1 (Goku) teclas W, A, S, D</p>
+            <p>Jugador 2 (Vegeta) teclas I, J, K, L</p>
+            <p>Apareceréis en un laberinto en el que tendréis que evitar tocar al malvado Freezer y
+                conseguir la mayor cantidad de puntos posibles
+            </p>
+            <p>Tendréis 1:30 minutos para reunir los puntos, ¡las bolas de drágon cuentan por tres!</p>
+        </div>
+        <div class="jugadores">
+            <div id="jugador1">
+                <img src="img/goku.gif" class="imagen">
+            </div>
+            <div id="jugador2">
+                <img src="img/vegeta.gif" class="imagen">
+            </div>
+        </div>
+        <button id="continuar" onclick="window.location.href='game.html'">Continuar</button>
+    </div>
+    <footer>
+        <div class="contactos">
+            <p><a href="mailto:christianrieigl@monlau.com">christianrieigl@monlau.com</a></p>
+        </div>
+        <div class="permisos">
+            <small>© 2024 Christian Riera. Todos los derechos reservados.</small>
+        </div>
+    </footer>
+</body>
+</html>

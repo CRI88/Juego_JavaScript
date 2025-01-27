@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabeBall</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="functions.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>LabeBall</h1>
+    </header>
+    <div class="game-settings">
+        <p>¡Selecciona el número de jugadores!</p>
+        <div class="buttons">
+            <button onclick="startGame(1)">1 Jugador</button>
+            <button onclick="startGame(2)">2 Jugadores</button>
+        </div>
+    </div>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div class="game-info">
+            <p id="timer">Tiempo restante: 50s</p>
+            <p id="record">Récord: 0 puntos</p>
+            <div id="scores"></div>
+        </div>
+    </div>
+    <div id="gameModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="winnerText"></h2>
+            <img id="finish" src="" alt="Ganador">
+            <br>
+            <button onclick="resetGame()">Reiniciar</button>
+        </div>
+    </div>
+</body>
+</html>
