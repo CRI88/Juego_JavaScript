@@ -224,21 +224,21 @@ class Item {
     }
 }
 
-// Game loop
+// Bucle del juego
 function updateGame() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw maze
+    // Dinujar laberinto
     drawMaze();
 
-    // Draw players, items, and enemy
+    // Dibujar jugadores, items y enemigo
     players.forEach((player) => player.draw());
     items.forEach((item) => item.draw());
     specialItems.forEach((item) => item.draw());
     enemy.move();
     enemy.draw();
 
-    // Check collisions
+    // Comprobar colisiones
     players.forEach((player) => {
         items = items.filter((item) => {
             if (checkCollision(player, item)) {
@@ -263,7 +263,7 @@ function updateGame() {
     });
 }
 
-// Draw maze
+// Dibujar laberinto
 function drawMaze() {
     maze.forEach((row, rowIndex) => {
         row.forEach((cell, colIndex) => {
@@ -275,12 +275,12 @@ function drawMaze() {
     });
 }
 
-// Collision detection
+// Detectar colisiones
 function checkCollision(a, b) {
     return a.x < b.x + b.width && a.x + a.width > b.x && a.y < b.y + b.height && a.y + a.height > b.y;
 }
 
-// Wall collision detection
+// Detectar colisiones con las paredes
 function checkWallCollision(obj) {
     const xStart = Math.floor(obj.x / cellSize);
     const yStart = Math.floor(obj.y / cellSize);
@@ -295,7 +295,7 @@ function checkWallCollision(obj) {
     );
 }
 
-// Get random position
+// Obtener posición aleatoria
 function getRandomPosition() {
     return {
         x: Math.floor(Math.random() * maze[0].length) * cellSize + cellSize * 0.2,
@@ -303,7 +303,7 @@ function getRandomPosition() {
     };
 }
 
-// Update scores
+// Actualizar puntuaciones
 function updateScores() {
     const scoresDiv = document.getElementById("scores");
     scoresDiv.innerHTML = players.map((player) => `<p>${player.name}: ${player.score} puntos</p>`).join("");
